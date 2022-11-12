@@ -1,0 +1,11 @@
+server:
+  port: 9004
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 622452414057-ina1anmcook11e9d05rkqhk6dnrr7f6d.apps.googleusercontent.com
+            client-secret: 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
