@@ -15,6 +15,6 @@ public class CustomerData {
     }).collect(Collectors.toMap(data -> (String) data[0],data-> (Integer) data[1]));
 
     public Integer getBalance(String customerName){
-        return customerData.get(customerName);
+        return customerData.get(customerName.toUpperCase());
     }
 }
