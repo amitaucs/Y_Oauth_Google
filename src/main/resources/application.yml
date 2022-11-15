@@ -6,9 +6,9 @@ spring:
     oauth2:
       client:
         registration:
-          #google:
-            #client-id: <Your client id>
-            #client-secret: <Your client secret>
-          facebook:
-            client-id: <Your facebook Client-Id>
-            client-secret: <Your facebook client-secret>>
+          google:
+            client-id: ${googleClientId}
+            client-secret: ${gooleClientSecret}
+          #facebook:
+            #client-id: <Your facebook Client-Id>
+            #client-secret: <Your facebook client-secret>>
