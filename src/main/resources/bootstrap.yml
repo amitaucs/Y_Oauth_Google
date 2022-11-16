@@ -5,6 +5,9 @@ spring:
     vault:
       uri: http://localhost:8200
       token: hvs.H6efPRiOM0KD2rLsc3Mt6Vik
+      kv:
+        backend: codetechies
+        default-context: glogin
 management:
   endpoints:
     web:
