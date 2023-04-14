@@ -9,13 +9,18 @@ import org.springframework.security.web.SecurityFilterChain;
 public class WebSecurity {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        httpSecurity.authorizeRequests()
-                .antMatchers("/").permitAll()
+        http.authorizeHttpRequests()
+                .requestMatchers("/").permitAll()
                 .anyRequest().authenticated()
-                .and().oauth2Login();
+                .and()
+                .oauth2Login();
 
-        return httpSecurity.build();
+        return (SecurityFilterChain)http.build();
     }
+
+
+
+
 }

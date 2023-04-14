@@ -17,6 +17,10 @@ public class RetailBankController {
 
     private CustomerData customerData;
 
+    @GetMapping("/")
+    public ResponseEntity<String> home(){
+        return ResponseEntity.status(HttpStatus.OK).body("Welcome to retail bank");
+    }
     @GetMapping("/balance")
     public ResponseEntity<String> customerBalance(@AuthenticationPrincipal OAuth2User principle){
 
